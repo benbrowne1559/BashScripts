@@ -34,7 +34,7 @@ add_to_hosts() {
 }
 
 
-CONFIG_PATH="/home/benbo/dev/configs/script_configs/focus_lock_config.txt"
+CONFIG_PATH="../script_configs/focus_lock_config.txt"
 if [ -f "$CONFIG_PATH" ]; then
     while IFS= read -r line || [ -n "$line" ]; do
         # Ignore empty lines or comments
