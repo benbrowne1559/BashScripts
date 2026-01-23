@@ -9,13 +9,14 @@ The script is currently setup to run every hour and outputs to '/var/log/health_
 	
 This was achieved via a cron job:
 
-crontab -e
-0 * * * * /home/benbo/dev/scripts/HealthCheck/health_check.sh >> /var/log/health_check.log 2>&1
+`crontab -e`
+`0 * * * * /home/benbo/dev/scripts/HealthCheck/health_check.sh >> /var/log/health_check.log 2>&1`
 
 Then a daily log rotation was setup using logrotate:
 
-sudo nano /etc/logrotate.d/health_check
+`sudo nano /etc/logrotate.d/health_check`
 
+```
 /var/log/health_check.log {
     daily
     rotate 7
@@ -23,5 +24,6 @@ sudo nano /etc/logrotate.d/health_check
     missingok
     notifempty
 }
+```
 
 this creates a new log file each day, keeps 7 days of logs, compresses old ones and runs automatically
