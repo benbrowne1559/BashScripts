@@ -1,7 +1,0 @@
-features:
-
-- checks memory useage
-- checks CPU load
-- list top 5 processes by CPU useage
-- list non temporary file systems + useage
-- outputs this as rolling log file in a clean format to /var/log/health_check.log
