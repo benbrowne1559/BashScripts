@@ -2,6 +2,12 @@
 
 # Health Check Script
 # Logs Disk Usage, Memory Usage, CPU Usage..
+# Author: Benbo Browne
+
+# Exit on Error
+set -e
+
+# Main Logic
 
 echo 
 printf "\033[3mHealth Check Report for: %s\033[0m \n\n" "$(date)"

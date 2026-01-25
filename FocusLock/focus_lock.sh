@@ -1,7 +1,15 @@
 #!/bin/bash
-# Focus Time Script
 
+# Focus Time Script
+# Author: Benbo Browne
+
+# Exit on Error
+set -e
+
+# Variables
 minutes=$1
+
+# Main Logic
 
 if ! [ -n "$1" ]
 # Test whether command-line argument is present (non-empty).
