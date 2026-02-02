@@ -21,10 +21,10 @@ unlock=$(($EPOCHSECONDS + (60 * $1)))
 
 while :
 do
-	sleep 60
-	if [[ $unlock < $EPOCHSECONDS ]]; then
+	sleep 30
+	if [[ $unlock -lt $EPOCHSECONDS ]]; then
 	echo "Unlock Time Met"
-	sudo cp /etc/hosts.bak /etc/hosts
+	cp /etc/hosts.bak /etc/hosts
 	break
 	fi
 done
